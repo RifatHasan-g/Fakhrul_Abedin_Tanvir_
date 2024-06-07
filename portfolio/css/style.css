@@ -2,12 +2,13 @@
 
 :root {
   --primary-color: #4caf50;
-  --secondary-color: #ff9800;
-  --background-color: #121212;
-  --text-color: #fff;
-  --accent-color: #f4f4f4;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  --transition: 0.3s ease-in-out;
+  --secondary-color: #333;
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --text-light-color: #777;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --transition-duration: 0.3s;
 }
 
 * {
@@ -23,64 +24,64 @@ html {
 }
 
 body {
-  background: var(--background-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
-  padding-left: 30rem;
-  transition: all var(--transition);
+  padding-left: 300px;
+  transition: all var(--transition-duration);
 }
 
-.header {
+header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 30rem;
+  width: 300px;
   height: 100%;
-  background: var(--primary-color);
+  background-color: #fff;
   padding: 2rem;
   box-shadow: var(--box-shadow);
   z-index: 1000;
-  transition: left var(--transition);
+  transition: left var(--transition-duration);
 }
 
-.header .user {
+header .user {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.header .user img {
-  width: 12rem;
-  height: 12rem;
+header .user img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
-  transition: transform var(--transition);
+  transition: transform var(--transition-duration);
 }
 
-.header .user img:hover {
+header .user img:hover {
   transform: scale(1.1);
 }
 
-.header .user h3 {
-  color: var(--text-color);
-  font-size: 2.4rem;
+header .user h3 {
   margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-size: 2.4rem;
 }
 
-.header .user p {
-  color: var(--accent-color);
+header .user p {
+  color: var(--text-light-color);
   font-size: 1.6rem;
 }
 
-.header .navbar a {
+header nav a {
   display: block;
   color: var(--text-color);
   font-size: 1.8rem;
   padding: 1rem 0;
   text-decoration: none;
-  transition: color var(--transition);
+  transition: color var(--transition-duration);
 }
 
-.header .navbar a:hover {
-  color: var(--secondary-color);
+header nav a:hover {
+  color: var(--primary-color);
 }
 
 #menu-btn {
@@ -103,15 +104,15 @@ section {
 .home .content h3 {
   font-size: 3.2rem;
   margin-bottom: 1.5rem;
-  color: var(--secondary-color);
-  animation: fadeInDown var(--transition);
+  color: var(--text-light-color);
+  animation: fadeInDown var(--transition-duration) ease;
 }
 
 .home .content h1 {
   font-size: 5.6rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
-  animation: fadeInUp var(--transition);
+  animation: fadeInUp var(--transition-duration) ease;
 }
 
 .home .content h1 span {
@@ -120,11 +121,11 @@ section {
 
 .home .content p {
   font-size: 1.8rem;
-  color: var(--accent-color);
+  color: var(--text-light-color);
   margin-bottom: 2rem;
-  max-width: 70rem;
+  max-width: 700px;
   margin: 0 auto;
-  animation: fadeIn var(--transition);
+  animation: fadeIn var(--transition-duration) ease;
 }
 
 .home .share a {
@@ -132,11 +133,12 @@ section {
   margin: 0 0.5rem;
   font-size: 2rem;
   color: var(--text-color);
-  transition: color var(--transition), transform var(--transition);
+  transition: color var(--transition-duration),
+    transform var(--transition-duration);
 }
 
 .home .share a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   transform: scale(1.2);
 }
 
@@ -148,12 +150,12 @@ section {
 }
 
 .about .info {
-  background: var(--accent-color);
+  background-color: #fff;
   padding: 2rem;
   box-shadow: var(--box-shadow);
   border-radius: 8px;
-  max-width: 80rem;
-  animation: fadeIn var(--transition);
+  max-width: 800px;
+  animation: fadeIn var(--transition-duration) ease;
 }
 
 .about .info h3 {
@@ -174,13 +176,13 @@ section {
 .about .info ul li {
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
-  color: var(--text-color);
+  color: var(--text-light-color);
 }
 
 .about .info a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: text-decoration var(--transition);
+  transition: text-decoration var(--transition-duration);
 }
 
 .about .info a:hover {
@@ -188,13 +190,13 @@ section {
 }
 
 .contact .content {
-  background: var(--accent-color);
+  background-color: #fff;
   padding: 2rem;
   box-shadow: var(--box-shadow);
   border-radius: 8px;
-  max-width: 80rem;
+  max-width: 800px;
   margin: 0 auto;
-  animation: fadeIn var(--transition);
+  animation: fadeIn var(--transition-duration) ease;
 }
 
 .contact .content h3 {
@@ -205,7 +207,7 @@ section {
 
 .contact .content .info {
   font-size: 1.8rem;
-  color: var(--text-color);
+  color: var(--text-light-color);
 }
 
 .contact .content .info h3 {
@@ -216,14 +218,14 @@ section {
 
 .contact .content .info h3 i {
   margin-right: 1rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .credits {
   text-align: center;
   padding: 2rem 0;
   font-size: 1.6rem;
-  color: var(--accent-color);
+  color: var(--text-light-color);
 }
 
 .credits span {
@@ -271,11 +273,11 @@ section {
     padding-left: 0;
   }
 
-  .header {
-    left: -30rem;
+  header {
+    left: -300px;
   }
 
-  .header.active {
+  header.active {
     left: 0;
   }
 
@@ -290,7 +292,7 @@ section {
   }
 
   #menu-btn.active {
-    left: 31rem;
+    left: 310px;
   }
 
   #theme-toggler {
